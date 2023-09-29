@@ -44,6 +44,7 @@ function Carousel() {
   }, []);
 
   return (
+    //outer box that holds the carousel and the buttons
     <Box
       sx={{
         display: 'flex',
@@ -54,6 +55,7 @@ function Carousel() {
         height: '400px',
       }}
     >
+
       <IconButton
         onClick={handlePrevPage}
         sx={{
