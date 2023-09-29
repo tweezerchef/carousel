@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import Card from './card.tsx';
 
 function Carousel() {
-  const [cards, setCards] = useState<JSX.Element[]>([]);
+  const [cards, setCards] = useState<React.JSX.Element[]>([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [slideDirection, setSlideDirection] = useState<'right' | 'left' | undefined>('left');
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-import CarouselMUIRepeat from '../components/carouselMUIexamRepeat.tsx';
+import CarouselMUIRepeat from '../components/basicbasic/carouselMUIexamRepeat.tsx';
 
 export default function Home() {
   return (
     <Stack
-      marginTop={'30px'}
+      marginTop="30px"
       direction="column"
       justifyContent="center"
       alignItems="center"
