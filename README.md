@@ -5,4 +5,6 @@ creating an array of duplicates 9/27/2023
 more to come very soon
 To see the carousel in action, clone the repo and run npm install and then npm start
 ```Thats it!```
+I'm also creating a tutorial heres the work in progress
+https://medium.com/@ltomblock/crafting-a-professional-looking-carousel-with-react-and-mui-746a86af0ab0
 
