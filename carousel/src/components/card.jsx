@@ -5,13 +5,14 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import reptileImage from '../images/contemplative-reptile.jpg';
 
 export default function MediaCard() {
   return (
     <Card sx={{ width: '250px', height: '335px' }}>
       <CardMedia
         sx={{ height: 140 }}
-        image={require('../images/contemplative-reptile.jpg')}
+        image={reptileImage}
         title="green iguana"
       />
       <CardContent>
