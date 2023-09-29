@@ -1,11 +1,32 @@
 import React from 'react';
 import Stack from '@mui/material/Stack';
+import Box from '@mui/material/Box';
+import CarouselMUIRepeat from '../components/carouselMUIexamRepeat.tsx';
 
 export default function Home () {
     return (
 
-            <Stack direction="row" spacing={2}>
-                <div>Home</div>
+            <Stack
+            marginTop={'30px'}
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            spacing={2}>
+                <Stack
+                spacing={1}
+                alignItems='center'>
+                <h1>Carousels 4 You!</h1>
+                <h2>React, Material UI, and Typescript</h2>
+            </Stack>
+            <Box
+                  overflow="hidden"
+                  alignContent="center"
+                  alignItems="center"
+                >
+                  <CarouselMUIRepeat />
+                </Box>
+
+
             </Stack>
         )
     }

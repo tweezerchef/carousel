@@ -42,7 +42,6 @@ function Carousel(){
           alignItems: 'center',
           alignContent: 'center',
           justifyContent: 'center',
-          width: '100%',
           height: '400px',
         }}
       >
@@ -50,9 +49,6 @@ function Carousel(){
           onClick={handlePrevPage}
           sx={{
             margin: 5,
-            padding: 0,
-            alignSelf: 'center',
-            justifySelf: 'start',
           }}
           disabled={currentPage === 0}
         >
@@ -85,9 +81,6 @@ function Carousel(){
           onClick={handleNextPage}
           sx={{
             margin: 5,
-            padding: 0,
-            alignSelf: 'center',
-            justifySelf: 'end',
           }}
           disabled={currentPage >= Math.ceil((cards.length || 0) / cardsPerPage) - 1}
         >

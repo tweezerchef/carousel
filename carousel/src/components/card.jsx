@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 
 export default function MediaCard() {
   return (
-    <Card sx={{ width: '250px', height: '350px' }}>
+    <Card sx={{ width: '250px', height: '335px' }}>
       <CardMedia
         sx={{ height: 140 }}
         image={require('../images/contemplative-reptile.jpg')}
