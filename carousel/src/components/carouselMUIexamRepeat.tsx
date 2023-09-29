@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import { useTheme } from '@mui/material/styles';
 import Card from './card.jsx';
 import Box from '@mui/material/Box';
 import { IconButton } from '@mui/material';
@@ -14,14 +12,11 @@ import Stack from '@mui/material/Stack';
 
 
 function Carousel(){
-    const theme = useTheme();
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
     const [cards, setCards] = useState<JSX.Element[]>([]);
     const [currentPage, setCurrentPage] = useState(0);
     const [slideDirection, setSlideDirection] = useState<'right' | 'left' | undefined>('left');
 
-    const cardsPerPage = isMobile ? 3 : 4;
+    const cardsPerPage = 4;
 
     const duplicateCards: JSX.Element[] = Array.from({ length: 10 }, (_, i) => <Card key={i} />)
 
@@ -48,9 +43,7 @@ function Carousel(){
           alignContent: 'center',
           justifyContent: 'center',
           width: '100%',
-          height: isMobile ? '80vw' : '400px',
-          marginTop: isMobile ? '.2vh' : '1.5vh',
-          paddingBottom: '0',
+          height: '400px',
         }}
       >
         <IconButton
@@ -65,14 +58,11 @@ function Carousel(){
         >
           <NavigateBeforeIcon />
         </IconButton>
-        <Box sx={{ position: 'relative', width: '100%', height: '100%' }}>
+        <Box sx={{ width: '100%', height: '100%' }}>
           {cards.map((card, index) => (
             <Box
               key={index}
               sx={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
                 width: '100%',
                 height: '100%',
                 display: currentPage === index ? 'block' : 'none',
