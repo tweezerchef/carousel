@@ -32,7 +32,7 @@ function DBCarousel() {
 
   // cardsPerPage is the number of cards that will be displayed per page
   // you can modify for your needs
-  const cardsPerPage = 4;
+  const cardsPerPage = 5;
   // axios get request to get the data from the database
   const fetchBooks = async () => {
     try {
