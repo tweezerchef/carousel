@@ -1,7 +1,8 @@
 import React from "react";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
-import CarouselMUIRepeat from "../components/basicbasic/carouselMUIexamRepeat.tsx";
+import CarouselMUIRepeat from "../components/basicbasic/carouselMUIexamRepeat";
+import DBCarousel from "../components/reactiveDBCar/dbCarousel";
 
 export default function Home() {
   return (
@@ -23,6 +24,14 @@ export default function Home() {
         marginTop="60px"
       >
         <CarouselMUIRepeat />
+      </Box>
+      <Box
+        overflow="hidden"
+        alignContent="center"
+        alignItems="center"
+        marginTop="60px"
+      >
+        <DBCarousel />
       </Box>
     </Stack>
   );

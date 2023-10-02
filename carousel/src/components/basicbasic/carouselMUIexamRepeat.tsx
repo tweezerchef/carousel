@@ -5,7 +5,7 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Slide from "@mui/material/Slide";
 import Stack from "@mui/material/Stack";
-import Card from "./card.tsx";
+import Card from "./card";
 
 function Carousel() {
   // setting the state variables

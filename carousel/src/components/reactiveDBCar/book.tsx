@@ -5,20 +5,13 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
+import { Book } from "./dbCarousel";
 //create type for props
 type BookProps = {
-  asin: string;
-  author: string;
-  image_url: string;
-  rating: string;
-  title: string;
-  url: string;
-  categories: string;
-  ISBN10: string;
+  book: Book;
 };
 
-export default function Book(book: BookProps) {
+export default function BookCard({ book }: BookProps) {
   return (
     <Card sx={{ width: "250px", height: "335px" }}>
       <CardMedia
@@ -28,11 +21,10 @@ export default function Book(book: BookProps) {
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {book.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+          {book.author}
         </Typography>
       </CardContent>
       <CardActions>

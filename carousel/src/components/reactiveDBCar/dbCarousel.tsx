@@ -5,12 +5,24 @@ import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import Slide from "@mui/material/Slide";
 import Stack from "@mui/material/Stack";
-import Book from "./book.tsx";
+import BookCard from "./book";
+import axios from "axios";
+
+export interface Book {
+  asin: string;
+  author: string;
+  image_url: string;
+  rating: string;
+  title: string;
+  url: string;
+  catagories: string;
+  ISBN10: string;
+}
 
 function DBCarousel() {
   // setting the state variables
   // cards will be the cards that are displayed
-  const [cards, setCards] = useState<React.ReactElement[]>([]);
+  const [cards, setCards] = useState<Book[]>([]);
   // currentPage is the current page of the cards that is currently displayed
   const [currentPage, setCurrentPage] = useState(0);
   // slideDirection is the direction that the cards will slide in
@@ -21,11 +33,15 @@ function DBCarousel() {
   // cardsPerPage is the number of cards that will be displayed per page
   // you can modify for your needs
   const cardsPerPage = 4;
-  // this is just a dummy array of cards it uses the MUI card demo and repeats it 10 times
-  const duplicateCards: React.ReactElement[] = Array.from(
-    { length: 10 },
-    (_, i) => <Card key={i} />
-  );
+  // axios get request to get the data from the database
+  const fetchBooks = async () => {
+    try {
+      const response = await axios.get("/api/books");
+      setCards(response.data);
+    } catch (err: any) {
+      console.error(err.message);
+    }
+  };
 
   // these two functions handle changing the pages
   const handleNextPage = () => {
@@ -38,14 +54,9 @@ function DBCarousel() {
     setCurrentPage((prevPage) => prevPage - 1);
   };
 
-  // This useEffect is really just for demonstration purposes
-  // it sets the cards to the duplicateCards array
-  // you can remove this and replace it with your own useEffect
-  // or if your page is static you can just set the cards to the array
-  // at the top of the file
+  // useEffect hook to fetch the data from the database
   useEffect(() => {
-    setCards(duplicateCards);
-    // eslint-disable-next-line
+    fetchBooks();
   }, []);
   // this sets the container width to the number of cards per page * 250px
   // which we know because it is defined in the card component
@@ -96,10 +107,16 @@ function DBCarousel() {
                 sx={{ width: "100%", height: "100%" }}
               >
                 {/* this slices the cards array to only display the amount you have previously determined per page*/}
-                {cards.slice(
-                  index * cardsPerPage,
-                  index * cardsPerPage + cardsPerPage
-                )}
+                {cards
+                  .slice(
+                    index * cardsPerPage,
+                    index * cardsPerPage + cardsPerPage
+                  )
+                  .map((book: Book) => (
+                    <Box key={book.asin}>
+                      <BookCard book={book} />
+                    </Box>
+                  ))}
               </Stack>
             </Slide>
           </Box>
