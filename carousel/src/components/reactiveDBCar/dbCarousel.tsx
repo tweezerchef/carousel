@@ -20,6 +20,8 @@ export interface Book {
 }
 
 function DBCarousel() {
+  const API_BASE_URL =
+    process.env.NODE_ENV === "production" ? "http://localhost:4000" : "";
   // setting the state variables
   // cards will be the cards that are displayed
   const [cards, setCards] = useState<Book[]>([]);
@@ -36,7 +38,7 @@ function DBCarousel() {
   // axios get request to get the data from the database
   const fetchBooks = async () => {
     try {
-      const response = await axios.get("/api/books");
+      const response = await axios.get(`${API_BASE_URL}/api/books`);
       console.log("API response:", response.data);
       setCards(response.data);
     } catch (err: any) {
