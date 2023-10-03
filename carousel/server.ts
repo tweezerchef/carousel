@@ -25,6 +25,7 @@ app.get('/api/books', async (req: Request, res: Response) => {
         const books = await prisma.bookdata.findMany();
         res.json(books);
     } catch (err) {
+        console.error("Error fetching books:", err);
         res.status(500).json({ error: 'An error occurred while fetching users' });
     }
 });
