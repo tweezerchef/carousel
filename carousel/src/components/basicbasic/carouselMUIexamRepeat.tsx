@@ -62,7 +62,7 @@ function Carousel() {
         justifyContent: "center",
         height: "400px",
         width: "100%",
-        marginTop: "15px",
+        marginTop: "40px",
       }}
     >
       <IconButton

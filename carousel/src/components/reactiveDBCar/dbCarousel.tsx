@@ -60,6 +60,7 @@ function DBCarousel() {
   // useEffect hook to fetch the data from the database
   useEffect(() => {
     fetchBooks();
+    // eslint-disable-next-line
   }, []);
   // this sets the container width to the number of cards per page * 250px
   // which we know because it is defined in the card component
@@ -76,7 +77,7 @@ function DBCarousel() {
         justifyContent: "center",
         height: "400px",
         width: "100%",
-        marginTop: "50px",
+        marginTop: "40px",
       }}
     >
       <IconButton

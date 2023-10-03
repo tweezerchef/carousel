@@ -21,7 +21,7 @@ export default function BasicPopover() {
   const id = open ? "simple-popover" : undefined;
 
   return (
-    <Box display="flex" justifyContent="center">
+    <Box display="flex" justifyContent="center" marginTop="15px">
       <Button aria-describedby={id} variant="contained" onClick={handleClick}>
         Static Version
       </Button>
