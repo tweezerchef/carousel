@@ -3,6 +3,7 @@ import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import CarouselMUIRepeat from "../components/basicbasic/carouselMUIexamRepeat";
 import DBCarousel from "../components/reactiveDBCar/dbCarousel";
+import BasicPopover from "../components/popovers/basicBasicPop";
 
 export default function Home() {
   return (
@@ -17,12 +18,9 @@ export default function Home() {
         <h1>Carousels 4 You!</h1>
         <h2>React, Material UI, and Typescript</h2>
       </Stack>
-      <Box
-        overflow="hidden"
-        alignContent="center"
-        alignItems="center"
-        marginTop="60px"
-      >
+
+      <Box overflow="hidden">
+        <BasicPopover />
         <CarouselMUIRepeat />
       </Box>
       <Box
