@@ -1,17 +1,22 @@
 import express, { Request, Response } from 'express';
 import path from 'path';
 import { PrismaClient } from '@prisma/client';
+import cors from 'cors';
+
 
 const app = express();
 const prisma = new PrismaClient();
 
 // Serve static assets (React app) in production
 if (process.env.NODE_ENV === 'production') {
+    app.use(cors({ origin: 'http://3.128.189.242:3000' }));
     app.use(express.static(path.join(__dirname, 'build')));
 
     app.get('/', (req: Request, res: Response) => {
         res.sendFile(path.join(__dirname, 'build', 'index.html'));
     });
+} else {
+    app.use(cors());
 }
 
 // Example endpoint to fetch all books
