@@ -21,7 +21,7 @@ export interface Book {
 
 function DBCarousel() {
   const API_BASE_URL =
-    process.env.NODE_ENV === "production" ? "http://localhost:4000" : "";
+    process.env.NODE_ENV === "production" ? "http://3.128.189.242:4000/" : "";
   // setting the state variables
   // cards will be the cards that are displayed
   const [cards, setCards] = useState<Book[]>([]);
