@@ -37,6 +37,7 @@ function DBCarousel() {
   const fetchBooks = async () => {
     try {
       const response = await axios.get("/api/books");
+      console.log("API response:", response.data);
       setCards(response.data);
     } catch (err: any) {
       console.error(err.message);

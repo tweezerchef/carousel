@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/static/css/main.e6c13ad2.css",
-    "main.js": "/static/js/main.a9f9b02e.js",
+    "main.js": "/static/js/main.c1360c0b.js",
     "static/media/contemplative-reptile.jpg": "/static/media/contemplative-reptile.7ab4186592990b5e85bc.jpg",
     "index.html": "/index.html",
     "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
-    "main.a9f9b02e.js.map": "/static/js/main.a9f9b02e.js.map"
+    "main.c1360c0b.js.map": "/static/js/main.c1360c0b.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.a9f9b02e.js"
+    "static/js/main.c1360c0b.js"
   ]
 }
