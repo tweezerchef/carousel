@@ -10,11 +10,11 @@ An in-progress carousel component for MUI/React. While working on a large book/s
 ## Installation & Setup
 
 1. **Clone the Repository** and navigate to the directory:
-   ```bash
-   git clone [your-repo-link]
-   cd [carousel-directory]
 
-   ## Setup Environment
+```bash
+   cd carousel
+ ```
+## Setup Environment
 
 1. Open the `sampleENV` file.
 2. Follow the instructions to set up your own database or use the provided setup.
@@ -25,12 +25,12 @@ An in-progress carousel component for MUI/React. While working on a large book/s
 ```bash
 npm install
 npm start
+```
 ## Run the Server (in a New Terminal Window)
+
 ```bash
 npx ts-node server.ts
-
-## That's it!
-
+```
 ## Tutorial
 
 I'm also in the process of creating a tutorial. Check out the first part:
