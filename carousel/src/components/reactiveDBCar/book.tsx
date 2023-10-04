@@ -14,9 +14,10 @@ export default function BookCard({ book }: BookProps) {
     <Card sx={{ width: "250px", height: "335px" }}>
       <CardMedia
         component="img"
-        height="200"
+        height="180"
         image={book.image_url}
         title={book.title}
+        style={{ objectFit: "cover" }}
       />
       <CardContent>
         <Typography gutterBottom variant="body2" component="div">
