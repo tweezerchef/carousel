@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
 // Example endpoint to fetch all books
 app.get('/api/books', async (req: Request, res: Response) => {
     try {
-        const books = await prisma.bookdata.findMany();
+        const books = await prisma.bookdata.findMany({ take: 20});
         res.json(books);
     } catch (err) {
         console.error("Error fetching books:", err);
